@@ -3,3 +3,7 @@
 What changed for people using Ventricle, newest first. Code-only work stays in the git history. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [SemVer](https://semver.org).
 
 ## [Unreleased]
+
+### Added
+
+- Strain, Growl, Rasp, Vowel, Cup and Level controls. Only Level changes the sound so far; the scream engine comes next.

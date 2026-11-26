@@ -15,8 +15,16 @@ A VST3 and CLAP plugin for macOS and Windows.
 
 | Control | Range | What it does |
 |---|---|---|
-| Gain | -30 to +30 dB | Output level |
+| Strain | 0–100% | How hard you have to push before the voice cracks |
+| Growl | 0–100% | Subharmonics under the note, from a rough edge to a low growl |
+| Rasp | 0–100% | Breath noise, for the hoarse hardcore yell |
+| Vowel | OH, AH, EH | The vowel the scream opens into |
+| Cup | 0–100% | The boxy honk of a mic cupped in the hand |
+| Level | -24 to +12 dB | Output level |
 | Stomp | On / Off | The footswitch. Off fades the effect out and passes the input untouched |
+
+Only Level changes the sound so far. The other knobs are in place for the
+scream engine, which comes next.
 
 Drag a knob up or down (hold Shift for fine moves), scroll, or use the
 arrow keys. Double-click a knob to reset it.

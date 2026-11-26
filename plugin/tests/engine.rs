@@ -18,13 +18,13 @@ fn render(input: &[f32], settings: Settings) -> Vec<f32> {
 }
 
 #[test]
-fn gain_ramp_matches_golden() {
+fn level_ramp_matches_golden() {
     let input = support::tone(110.0, 0.25, SR);
-    support::check_golden("gain-ramp", &render(&input, Settings { gain: 0.5, ..Settings::default() }), SR as u32);
+    support::check_golden("level-ramp", &render(&input, Settings { level: -6.0, ..Settings::default() }), SR as u32);
 }
 
 #[test]
-fn unity_gain_passes_input_through() {
+fn defaults_pass_input_through() {
     let input = support::tone(110.0, 0.1, SR);
     assert_eq!(render(&input, Settings::default()), input);
 }
@@ -32,7 +32,7 @@ fn unity_gain_passes_input_through() {
 #[test]
 fn stomp_off_fades_to_the_dry_signal() {
     let input = support::tone(110.0, 1.0, SR);
-    let output = render(&input, Settings { gain: 0.5, stomp: false });
+    let output = render(&input, Settings { level: -6.0, stomp: false, ..Settings::default() });
     let tail = input.len() / 2;
     assert_eq!(output[tail..], input[tail..]);
 }
