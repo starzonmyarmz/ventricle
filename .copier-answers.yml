@@ -1,0 +1,21 @@
+_commit: '8710218'
+_src_path: /Users/marino/Code/project-kit
+app_id: com.iamdanielmarino.ventricle
+author: Daniel Marino
+description: Turns any voice, guitar or bass into screamed and growled metal vocals.
+design_doc: true
+display_name: Ventricle
+goldens: true
+name: ventricle
+oss_community: false
+owner: starzonmyarmz
+public: true
+screenshot: true
+ships:
+- github-release
+sponsors: true
+stack: vst-plugin
+starter: true
+voice_doc: false
+vst3_class_id: VentricleDanielM
+year: 2026

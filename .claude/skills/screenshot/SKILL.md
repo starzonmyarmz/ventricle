@@ -1,0 +1,34 @@
+---
+name: screenshot
+description: Retake the plugin's README screenshot (docs/<name>.png) after a visible change to the editor in ui/index.html. Use after any UI change you'd see in the window, or when asked for a new screenshot.
+---
+
+# Retake the screenshot
+
+The README shows `docs/<name>.png`, where `<name>` is the crate name.
+Nothing on GitHub retakes it. Retake it whenever a change to the UI or
+`PAGE.size` shows in the window, and commit it with that change.
+`scripts/release` retakes it too, through `scripts/pre-release.sh`, so the
+release commit's shot shows the new version.
+
+1. Run `cargo test` so `ui/mock.json` is known to match the plugin's
+   parameters and defaults, and the shot shows the real controls at
+   their defaults. If it's stale, rewrite it with `BLESS=1 cargo test`.
+2. Run `scripts/screenshot.sh`. It needs pngquant and ImageMagick
+   (`brew install pngquant imagemagick`). It renders the page against
+   its mock in WebKit at 2x and `PAGE.size`, with the version from
+   `Cargo.toml`, plus a margin for the drop shadow. It drops the `html`
+   and `body` backgrounds, so the object sits on transparency with its
+   shadow. Then it crops to what's visible, writes `docs/<name>.png`
+   852 px tall, quantized with pngquant, and sets the README `<img>`
+   `width` to half its pixel width. An older `docs/<name>.jpg` is deleted and the
+   README `<img>` pointed at the PNG.
+3. Look at the PNG. If fonts haven't loaded, a knob is mid-glide or the
+   mock's values are off, fix that and rerun it. To see the
+   transparency, flatten a copy onto white:
+   `magick docs/<name>.png -background white -flatten <scratch>/white.png`.
+   A page whose object fills the whole window (Sputnik) comes out
+   opaque, which is fine.
+4. Keep the README `<img>` `alt` describing what's on the panel,
+   including any new control. The workflow can't update it.
+5. Commit the image with the UI change it shows, not on its own.
