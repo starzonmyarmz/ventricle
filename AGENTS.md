@@ -10,6 +10,7 @@ Read before working:
 ```sh
 cargo test                                  # engine tests and golden renders, offline
 BLESS=1 cargo test                          # rewrite golden renders and ui/mock.json after an intended change
+cargo run --release --example render -- in.wav out.wav [strain growl rasp vowel cup]   # hear the engine on any WAV
 cargo fmt --all && cargo clippy --workspace --all-targets -- -D warnings
 cargo xtask bundle ventricle --release     # target/bundled/Ventricle.{vst3,clap}
 scripts/install.sh                          # bundle, sign ad hoc and install on macOS as X.Y.Z-dev+<sha>

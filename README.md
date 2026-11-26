@@ -71,6 +71,13 @@ stored golden renders and synthetic checks. After an intended change to
 the sound, rerun with `BLESS=1` to rewrite the renders, and listen to
 them before committing.
 
+To hear the engine on a real voice without a host, run any WAV through
+it, with optional Strain, Growl, Rasp, Vowel and Cup values from 0 to 1:
+
+```sh
+cargo run --release --example render -- in.wav out.wav 0.8 1 0.3 0.4 0.4
+```
+
 ## Working on the UI
 
 The editor is a webview showing `ui/index.html`, which is compiled into
