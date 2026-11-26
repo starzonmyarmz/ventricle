@@ -4,13 +4,33 @@
 <meta charset="utf-8">
 <title>Ventricle</title>
 <style>
+  /* Pirata One (SIL OFL 1.1, ui/fonts/PirataOne-OFL.txt), ASCII subset. */
+  @font-face {
+    font-family: "Pirata One";
+    src: url(data:font/woff2;base64,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) format("woff2");
+  }
+
   :root {
-    --bg: #1b1a19;
-    --panel: #262523;
-    --ink: #f2efe8;
-    --muted: #8f8b83;
-    --accent: #ff7a3d;
-    --track: #3a3835;
+    --board: #181716;
+    --coat: #8e1414;
+    --coat-hi: #b3221d;
+    --coat-lo: #5a0a0b;
+    --metal: #c4c6c8;
+    --metal-hi: #eceeef;
+    --metal-lo: #8a8d90;
+    --cream: #efe6cf;
+    --knob: #151413;
+    --knob-hi: #34312e;
+    --led: #ff3b2f;
+    --led-off: #4a1310;
+    --pill: #120f0c;
+    --face: "Pirata One", serif;
+    --pedal-w: 400px;
+    --pedal-h: 560px;
+    --knob-size: 62px;
+    --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+    --spots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='560'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.05' numOctaves='4' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14 0 0 0 -8.5'/%3E%3C/filter%3E%3Crect width='400' height='560' filter='url(%23w)'/%3E%3C/svg%3E");
+    --scuffed: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='160'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.09' numOctaves='3' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16 0 0 0 11.4'/%3E%3C/filter%3E%3Crect width='400' height='160' filter='url(%23w)'/%3E%3C/svg%3E");
   }
 
   * { box-sizing: border-box; }
@@ -27,9 +47,9 @@
   body {
     display: grid;
     place-items: center;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: -apple-system, "Segoe UI", sans-serif;
+    background: radial-gradient(ellipse at 50% 40%, rgb(255 255 255 / 0.05), transparent 65%), var(--board);
+    font-family: var(--face);
+    color: var(--cream);
   }
 
   button {
@@ -41,119 +61,334 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--cream);
     outline-offset: 4px;
   }
 
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 28px;
-    padding: 28px;
-    border-radius: 16px;
-    background: var(--panel);
-    box-shadow: 0 30px 44px rgb(0 0 0 / 0.65), 0 6px 10px rgb(0 0 0 / 0.5);
+  .pedal {
+    position: relative;
+    inline-size: var(--pedal-w);
+    block-size: var(--pedal-h);
+    border-radius: 24px;
+    padding: 40px 34px 30px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
+    background: var(--noise), linear-gradient(155deg, var(--coat-hi), var(--coat) 40%, var(--coat-lo));
+    background-blend-mode: soft-light, normal;
+    box-shadow:
+      inset 2px 3px 0 rgb(255 255 255 / 0.2),
+      inset -3px -5px 0 rgb(0 0 0 / 0.3),
+      inset 0 0 0 1px rgb(0 0 0 / 0.3),
+      0 2px 0 #3a0607,
+      0 30px 44px rgb(0 0 0 / 0.65),
+      0 6px 10px rgb(0 0 0 / 0.5);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      border: 7px solid var(--metal);
+      mask: var(--spots);
+      pointer-events: none;
+    }
   }
 
-  .version {
+  .chip {
     position: absolute;
-    inset-block-end: 10px;
-    inset-inline-end: 12px;
-    margin: 0;
-    font-size: 10px;
-    letter-spacing: 0.04em;
-    color: var(--muted);
+    background: linear-gradient(150deg, var(--metal-hi), var(--metal) 40%, var(--metal-lo));
+    border-radius: 40% 60% 55% 45%;
+    box-shadow: inset 1px 1px 1px rgb(0 0 0 / 0.5), 0 0 0 1px rgb(0 0 0 / 0.15);
+    pointer-events: none;
+
+    &.a { inline-size: 30px; block-size: 14px; inset-block-start: 170px; inset-inline-start: 4px; rotate: -12deg; }
+    &.b { inline-size: 12px; block-size: 8px; inset-block-start: 300px; inset-inline-end: 40px; rotate: 30deg; }
+    &.c { inline-size: 40px; block-size: 12px; inset-block-start: 3px; inset-inline-end: 90px; rotate: 6deg; }
+    &.d { inline-size: 9px; block-size: 6px; inset-block-start: 250px; inset-inline-start: 70px; rotate: -40deg; }
+    &.e { inline-size: 22px; block-size: 10px; inset-block-end: 70px; inset-inline-end: 6px; rotate: 74deg; }
+  }
+
+  .screw {
+    position: absolute;
+    inline-size: 14px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, var(--metal-hi), var(--metal) 45%, var(--metal-lo));
+    box-shadow: 0 1px 1px rgb(0 0 0 / 0.5), inset 0 0 0 1px rgb(0 0 0 / 0.25);
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      inset: 45% 18%;
+      background: rgb(0 0 0 / 0.55);
+      border-radius: 1px;
+      rotate: var(--slot);
+    }
+    &::after { rotate: calc(var(--slot) + 90deg); }
+
+    &.tl { inset-block-start: 13px; inset-inline-start: 13px; --slot: 12deg; }
+    &.tr { inset-block-start: 13px; inset-inline-end: 13px; --slot: 61deg; }
+    &.bl { inset-block-end: 13px; inset-inline-start: 13px; --slot: 33deg; }
+    &.br { inset-block-end: 13px; inset-inline-end: 13px; --slot: 78deg; }
+  }
+
+  /* ---------- knobs ---------- */
+
+  .knobs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px 40px;
   }
 
   .control {
+    position: relative;
     display: grid;
     justify-items: center;
-    gap: 8px;
-    inline-size: 72px;
+    gap: 14px;
   }
 
-  .name {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
+  .label {
+    font-size: 22px;
+    line-height: 1;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 0.4);
   }
 
-  .text {
-    font-size: 12px;
-    font-variant-numeric: tabular-nums;
+  .value {
+    position: absolute;
+    inset-block-start: calc(100% + 6px);
+    padding: 3px 7px;
+    border-radius: 4px;
+    background: var(--pill);
+    color: var(--cream);
+    font: 600 10px/1.2 -apple-system, "Segoe UI", sans-serif;
+    letter-spacing: 0.04em;
     white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    opacity: 0;
+    translate: 0 -3px;
+    transition: opacity 120ms, translate 120ms;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .control:is(:hover, :focus-within, .active) .value {
+    opacity: 1;
+    translate: 0 0;
   }
 
   .knob {
-    --arc: calc(var(--turn) * 270deg);
+    --sweep: 270deg;
     position: relative;
-    inline-size: 56px;
+    inline-size: var(--knob-size);
     aspect-ratio: 1;
     border-radius: 50%;
     touch-action: none;
     cursor: ns-resize;
-    background: conic-gradient(from -135deg, var(--accent) 0 var(--arc), var(--track) var(--arc) 270deg, transparent 270deg);
-    mask: radial-gradient(circle, transparent 55%, #000 56%);
+
+    &:focus-visible { outline-offset: 12px; }
   }
 
-  .dial {
-    position: relative;
-    inline-size: 56px;
-    aspect-ratio: 1;
+  .knob .body {
+    position: absolute;
+    inset: 0;
+    filter: drop-shadow(0 5px 4px rgb(0 0 0 / 0.5)) drop-shadow(0 1px 0 rgb(0 0 0 / 0.5));
+  }
 
-    & .pointer {
+  .knob .skirt, .knob .cap, .knob .pointer {
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  .knob .skirt {
+    inset: 0;
+    rotate: calc(var(--turn) * var(--sweep) - var(--sweep) / 2);
+    background:
+      radial-gradient(circle, transparent 60%, rgb(0 0 0 / 0.5) 100%),
+      repeating-conic-gradient(var(--knob) 0 5deg, var(--knob-hi) 5deg 10deg);
+  }
+
+  .knob .cap {
+    inset: 14%;
+    background:
+      radial-gradient(circle at 34% 28%, rgb(255 255 255 / 0.22), transparent 55%),
+      radial-gradient(circle at 50% 50%, #26231f, #0e0d0c);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.18), 0 0 0 1px rgb(0 0 0 / 0.6);
+  }
+
+  .knob .pointer {
+    inset: 0;
+    rotate: calc(var(--turn) * var(--sweep) - var(--sweep) / 2);
+
+    &::before {
+      content: "";
       position: absolute;
-      inset: 0;
-      rotate: calc(var(--turn) * 270deg - 135deg);
-      pointer-events: none;
-
-      &::before {
-        content: "";
-        position: absolute;
-        inset-inline-start: calc(50% - 1px);
-        inset-block-start: 16%;
-        inline-size: 2px;
-        block-size: 26%;
-        border-radius: 1px;
-        background: var(--ink);
-      }
+      inset-inline-start: calc(50% - 1.5px);
+      inset-block-start: 16%;
+      inline-size: 3px;
+      block-size: 30%;
+      border-radius: 2px;
+      background: var(--cream);
+      box-shadow: 0 0 2px rgb(0 0 0 / 0.6);
     }
   }
 
-  .switch {
-    inline-size: 44px;
-    block-size: 24px;
-    border-radius: 12px;
-    background: var(--track);
+  .ticks {
+    position: absolute;
+    inset: -11px;
+    pointer-events: none;
+
+    & i {
+      position: absolute;
+      inset-inline-start: calc(50% - 1.5px);
+      inset-block-start: 0;
+      inline-size: 3px;
+      block-size: 50%;
+      transform-origin: 50% 100%;
+
+      &::before {
+        content: "";
+        display: block;
+        inline-size: 3px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: var(--cream);
+      }
+      &.major::before { scale: 1.5; }
+    }
+  }
+
+  /* ---------- brand ---------- */
+
+  .wordmark {
+    align-self: center;
+    margin: 0;
+    font-size: 84px;
+    font-weight: 400;
+    line-height: 1;
+    text-shadow: 0 2px 0 rgb(0 0 0 / 0.35);
+    mask: var(--scuffed);
+  }
+
+  /* ---------- footswitch ---------- */
+
+  .stomp-zone {
     position: relative;
+    inline-size: 100%;
+    display: grid;
+    justify-items: center;
+    gap: 16px;
+  }
+
+  .led {
+    inline-size: 16px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 35%, #ff8a80, var(--led-off) 60%);
+    box-shadow:
+      0 0 0 3px var(--metal-lo),
+      0 0 0 4px rgb(0 0 0 / 0.4),
+      inset 0 -2px 3px rgb(0 0 0 / 0.5);
+    transition: background 80ms, box-shadow 80ms;
+
+    &.on {
+      background: radial-gradient(circle at 40% 35%, #fff2ee, var(--led) 45%, #b3150c);
+      box-shadow:
+        0 0 0 3px var(--metal-lo),
+        0 0 0 4px rgb(0 0 0 / 0.4),
+        0 0 14px 4px rgb(255 59 47 / 0.55),
+        0 0 30px 8px rgb(255 59 47 / 0.22);
+    }
+  }
+
+  .stomp-wrap {
+    filter: drop-shadow(0 6px 5px rgb(0 0 0 / 0.5));
+  }
+
+  .stomp {
+    position: relative;
+    display: block;
+    inline-size: 76px;
+    aspect-ratio: 1;
     cursor: pointer;
-    transition: background 120ms;
+    background: conic-gradient(from 0deg, var(--metal-hi), var(--metal-lo) 60deg, var(--metal) 120deg, var(--metal-hi) 180deg, var(--metal-lo) 240deg, var(--metal) 300deg, var(--metal-hi));
+    clip-path: polygon(25% 2%, 75% 2%, 99% 50%, 75% 98%, 25% 98%, 1% 50%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 17%;
+      border-radius: 50%;
+      background: radial-gradient(circle at 38% 30%, var(--metal-hi), var(--metal) 42%, var(--metal-lo) 88%);
+      box-shadow:
+        0 3px 4px rgb(0 0 0 / 0.55),
+        inset 0 0 0 1px rgb(0 0 0 / 0.25),
+        inset 0 -3px 4px rgb(0 0 0 / 0.25);
+      transition: scale 70ms, box-shadow 70ms;
+    }
 
     &::after {
       content: "";
       position: absolute;
-      inset-block: 3px;
-      inset-inline-start: 3px;
-      inline-size: 18px;
+      inset: 30%;
       border-radius: 50%;
-      background: var(--ink);
-      transition: translate 120ms;
+      background: repeating-radial-gradient(circle, rgb(0 0 0 / 0.08) 0 1px, transparent 1px 3px);
+      transition: scale 70ms;
     }
 
-    &[aria-checked="true"] {
-      background: var(--accent);
-
-      &::after { translate: 20px 0; }
+    &:active::before {
+      scale: 0.94;
+      box-shadow: 0 1px 1px rgb(0 0 0 / 0.55), inset 0 0 0 1px rgb(0 0 0 / 0.3), inset 0 -2px 3px rgb(0 0 0 / 0.3);
     }
+    &:active::after { scale: 0.94; }
+  }
+
+  .stamp {
+    position: absolute;
+    inset-block-end: 6px;
+    inset-inline-start: 2px;
+    padding: 5px 10px 4px;
+    border-radius: 5px 11px 7px 4px;
+    rotate: -3deg;
+    background: var(--noise), linear-gradient(150deg, var(--metal-hi), var(--metal) 45%, var(--metal-lo));
+    background-blend-mode: soft-light, normal;
+    box-shadow: inset 1px 1px 2px rgb(0 0 0 / 0.45), 0 0 0 1px rgb(0 0 0 / 0.15);
+    font: 700 11px/1 ui-monospace, Menlo, monospace;
+    letter-spacing: 0.14em;
+    color: #5d6064;
+    text-shadow: 0 1px 0 rgb(255 255 255 / 0.65), 0 -1px 0 rgb(0 0 0 / 0.4);
   }
 </style>
 </head>
 <body>
-<main id="controls"></main>
-<p class="version" id="version"></p>
+<main class="pedal">
+  <span class="screw tl"></span>
+  <span class="screw tr"></span>
+  <span class="screw bl"></span>
+  <span class="screw br"></span>
+  <span class="chip a"></span>
+  <span class="chip b"></span>
+  <span class="chip c"></span>
+  <span class="chip d"></span>
+  <span class="chip e"></span>
+
+  <div class="knobs">
+    <div class="control" data-knob="strain"></div>
+    <div class="control" data-knob="growl"></div>
+    <div class="control" data-knob="rasp"></div>
+    <div class="control" data-knob="vowel"></div>
+    <div class="control" data-knob="cup"></div>
+    <div class="control" data-knob="level"></div>
+  </div>
+
+  <h1 class="wordmark">Ventricle</h1>
+
+  <div class="stomp-zone">
+    <span class="led" id="led"></span>
+    <div class="stomp-wrap"><button class="stomp" id="stomp" role="switch" aria-label="Stomp"></button></div>
+    <span class="stamp" id="version"></span>
+  </div>
+</main>
 
 <script>
 (() => {
@@ -179,24 +414,16 @@
     bridge({ type: "end", id });
   }
 
-  // ---------- controls ----------
+  // ---------- knobs ----------
 
-  function control(p, widget) {
-    const el = document.createElement("div");
-    el.className = "control";
-    const name = document.createElement("span");
-    name.className = "name";
-    name.textContent = p.name;
-    const text = document.createElement("span");
-    text.className = "text";
-    el.append(name, widget, text);
-    return { el, text };
-  }
+  const TICKS = 11;
 
-  function buildKnob(p) {
+  function buildKnob(el, p) {
     const id = p.id;
-    const dial = document.createElement("div");
-    dial.className = "dial";
+    const label = document.createElement("span");
+    label.className = "label";
+    label.textContent = p.name;
+
     const knob = document.createElement("div");
     knob.className = "knob";
     knob.tabIndex = 0;
@@ -204,27 +431,42 @@
     knob.setAttribute("aria-label", p.name);
     knob.setAttribute("aria-valuemin", "0");
     knob.setAttribute("aria-valuemax", "1");
-    const pointer = document.createElement("div");
-    pointer.className = "pointer";
-    dial.append(knob, pointer);
-    const { el, text } = control(p, dial);
+
+    const ticks = document.createElement("div");
+    ticks.className = "ticks";
+    for (let i = 0; i < TICKS; i++) {
+      const tick = document.createElement("i");
+      if (i === 0 || i === TICKS - 1 || i === (TICKS - 1) / 2) tick.className = "major";
+      tick.style.rotate = `${-135 + (270 * i) / (TICKS - 1)}deg`;
+      ticks.append(tick);
+    }
+
+    const body = document.createElement("div");
+    body.className = "body";
+    for (const part of ["skirt", "cap", "pointer"]) {
+      const div = document.createElement("div");
+      div.className = part;
+      body.append(div);
+    }
+    knob.append(ticks, body);
+
+    const value = document.createElement("span");
+    value.className = "value";
+    el.replaceChildren(label, knob, value);
 
     views.set(id, (p) => {
-      dial.style.setProperty("--turn", p.value.toFixed(4));
+      knob.style.setProperty("--turn", p.value.toFixed(4));
       knob.setAttribute("aria-valuenow", p.value.toFixed(4));
       knob.setAttribute("aria-valuetext", p.text);
-      text.textContent = p.text;
+      value.textContent = p.text;
     });
-
-    const stepped = p.steps > 0;
-    const snap = (v) => stepped ? Math.round(v * p.steps) / p.steps : v;
-    const stepSize = stepped ? 1 / p.steps : 0.01;
 
     knob.addEventListener("pointerdown", (e) => {
       if (e.button !== 0) return;
       knob.setPointerCapture(e.pointerId);
       knob.focus();
       dragging.add(id);
+      el.classList.add("active");
       bridge({ type: "begin", id });
       let raw = p.value;
       let lastY = e.clientY;
@@ -232,14 +474,14 @@
         const fine = ev.shiftKey ? 0.15 : 1;
         raw = Math.min(1, Math.max(0, raw + ((lastY - ev.clientY) / 200) * fine));
         lastY = ev.clientY;
-        const next = snap(raw);
-        if (next !== p.value) setParam(id, next);
+        if (raw !== p.value) setParam(id, raw);
       };
       const up = () => {
         knob.removeEventListener("pointermove", move);
         knob.removeEventListener("pointerup", up);
         knob.removeEventListener("pointercancel", up);
         dragging.delete(id);
+        el.classList.remove("active");
         bridge({ type: "end", id });
       };
       knob.addEventListener("pointermove", move);
@@ -254,41 +496,35 @@
       if (dir === undefined) return;
       e.preventDefault();
       e.stopPropagation();
-      const amount = stepped ? stepSize : stepSize * (e.shiftKey ? 10 : 1);
-      gesture(id, () => setParam(id, snap(p.value + dir * amount)));
+      gesture(id, () => setParam(id, p.value + dir * (e.shiftKey ? 0.1 : 0.01)));
     });
 
     knob.addEventListener("wheel", (e) => {
       e.preventDefault();
       const dir = Math.sign(-e.deltaY);
       if (!dir) return;
-      gesture(id, () => setParam(id, snap(p.value + dir * (stepped ? stepSize : stepSize / 2))));
+      gesture(id, () => setParam(id, p.value + dir * 0.005));
     }, { passive: false });
-
-    return el;
   }
 
-  function buildSwitch(p) {
-    const id = p.id;
-    const button = document.createElement("button");
-    button.className = "switch";
-    button.setAttribute("role", "switch");
-    button.setAttribute("aria-label", p.name);
-    const { el, text } = control(p, button);
-    views.set(id, (p) => {
-      button.setAttribute("aria-checked", String(p.value >= 0.5));
-      text.textContent = p.text;
+  function buildStomp(p) {
+    const button = document.getElementById("stomp");
+    const led = document.getElementById("led");
+    views.set(p.id, (p) => {
+      const on = p.value >= 0.5;
+      button.setAttribute("aria-checked", String(on));
+      led.classList.toggle("on", on);
     });
-    button.addEventListener("click", () => gesture(id, () => setParam(id, p.value >= 0.5 ? 0 : 1)));
-    return el;
+    button.onclick = () => gesture(p.id, () => setParam(p.id, p.value >= 0.5 ? 0 : 1));
   }
 
-  // Two-step parameters (bools and two-option enums) become switches,
-  // everything else a knob. Replace this with a hand-laid page once the
-  // plugin's controls settle.
   function build() {
-    const root = document.getElementById("controls");
-    root.replaceChildren(...[...params.values()].map((p) => p.steps === 1 ? buildSwitch(p) : buildKnob(p)));
+    for (const el of document.querySelectorAll("[data-knob]")) {
+      const p = params.get(el.dataset.knob);
+      if (p) buildKnob(el, p);
+    }
+    const stomp = params.get("stomp");
+    if (stomp) buildStomp(stomp);
     for (const p of params.values()) views.get(p.id)?.(p);
   }
 

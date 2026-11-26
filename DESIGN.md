@@ -4,7 +4,7 @@ How Ventricle looks and feels. When this file and your instincts disagree, this 
 
 ## The look in one line
 
-<!-- e.g. "A worn stompbox on a dark stage: chunky, warm, a little scuffed." -->
+A plain stompbox in arterial red, stomped through a hundred basement shows.
 
 ## Principles
 
@@ -26,11 +26,12 @@ Every plugin gets its own look, but they share an approach.
 
 Set by the `design-kickoff` skill.
 
-- **Object:**
-- **Palette:**
-- **Wordmark font:**
-- **Controls:**
-- **Version placement:**
+- **Object:** A plain guitar stompbox, not a themed object, 400 × 560 in a 460 × 620 window. Road-worn: paint chipped through to bare aluminium around the edges and in a few chips across the face, the wordmark scuffed.
+- **Palette:** Arterial red powder coat, cream printing, bare aluminium where the paint is gone, black knurled knobs, a red LED, a chrome hex footswitch.
+- **Wordmark font:** Pirata One, a readable blackletter, for the wordmark and knob labels, with no subtitle under the wordmark, embedded as a base64 ASCII subset (`ui/fonts`). Chosen over Rubik Dirt, Black Ops One and Permanent Marker.
+- **Controls:** Strain, Growl, Rasp, Vowel, Cup and Level in a 3 × 2 grid, plus the Stomp footswitch and its LED. Presets set the throat size and the number of doubles behind the scenes. Numbers show in a pill under a knob while it's hovered, focused or turned.
+- **Version placement:** Stamped into a bare-metal patch, bottom left, where the red has worn off.
+- **Art:** Nothing reacts beyond the knobs turning and the LED.
 
 ## Tokens
 
@@ -38,8 +39,21 @@ Every color, size and space comes from a token. If nothing fits, add a token her
 
 | Token | Value | Used for |
 |---|---|---|
+| `--coat`, `--coat-hi`, `--coat-lo` | `#8e1414`, `#b3221d`, `#5a0a0b` | The powder coat |
+| `--metal`, `--metal-hi`, `--metal-lo` | `#c4c6c8`, `#eceeef`, `#8a8d90` | Worn-through aluminium, screws, footswitch, version stamp |
+| `--cream` | `#efe6cf` | Printing, pointers, ticks |
+| `--knob`, `--knob-hi` | `#151413`, `#34312e` | Knurled knob skirts |
+| `--led`, `--led-off` | `#ff3b2f`, `#4a1310` | The LED |
+| `--pill` | `#120f0c` | Value readout |
+| `--pedal-w`, `--pedal-h` | `400px`, `560px` | The pedal |
+| `--knob-size` | `62px` | Knob diameter |
+| `--spots`, `--scuffed` | SVG noise masks | Edge wear; the wordmark's scuffs |
 
 ## Components
+
+- **Knob:** cream tick dots (11, with larger ends and middle), a knurled skirt and cap with a cream pointer that turn, and a shine and drop shadow that stay put. Same as Halfwit's.
+- **Footswitch and LED:** a chrome hex nut with a round button that sinks when pressed; the LED glows while the effect is on.
+- **Wear:** the edge wear is a metal border masked by `--spots`; the chips are a handful of placed `.chip` shapes, varied in size and tilt.
 
 ## Patterns
 
@@ -52,5 +66,7 @@ Every color, size and space comes from a token. If nothing fits, add a token her
 5. Record it above.
 
 ## Known drift
+
+- Shadows, highlights and gradient stops in `ui/index.html` use raw values (`#3a0607`, `#ff8a80`, `#26231f`, `#5d6064` and the like) rather than tokens, and the readout pill uses a system font.
 
 Existing debt to clean up, not to copy.

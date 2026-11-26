@@ -2,7 +2,7 @@
 
 Turns any voice, guitar or bass into screamed and growled metal vocals.
 
-<img src="docs/ventricle.png" width="400" alt="Ventricle">
+<img src="docs/ventricle.png" width="318" alt="Ventricle, a road-worn arterial red stompbox with paint chipped to bare aluminium at the edges, Strain, Growl, Rasp, Vowel, Cup and Level knobs in cream blackletter, a scuffed Ventricle wordmark, a red LED, a chrome hex footswitch and the version stamped into a bare-metal patch">
 
 A VST3 and CLAP plugin for macOS and Windows.
 <!-- Then a sentence or two on what it does to the sound and who it's for. -->

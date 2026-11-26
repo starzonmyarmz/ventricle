@@ -7,3 +7,4 @@ What changed for people using Ventricle, newest first. Code-only work stays in t
 ### Added
 
 - Strain, Growl, Rasp, Vowel, Cup and Level controls. Only Level changes the sound so far; the scream engine comes next.
+- A road-worn arterial red pedal for the editor, with a footswitch and LED.

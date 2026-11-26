@@ -10,13 +10,13 @@ use std::sync::Arc;
 
 static PAGE: editor::Page = editor::Page {
     title: "Ventricle",
-    size: (360, 220),
+    size: (460, 620),
     html: include_str!("../../ui/index.html"),
     version: match option_env!("PLUGIN_VERSION") {
         Some(version) => version,
         None => env!("CARGO_PKG_VERSION"),
     },
-    background: (27, 26, 25, 255),
+    background: (24, 23, 22, 255),
     dev_url_var: "VENTRICLE_UI_URL",
 };
 
