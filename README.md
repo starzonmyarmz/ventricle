@@ -4,12 +4,26 @@ Turns any voice, guitar or bass into screamed and growled metal vocals.
 
 <img src="docs/ventricle.png" width="318" alt="Ventricle, a road-worn arterial red stompbox with paint chipped to bare aluminium at the edges, Strain, Growl, Rasp, Vowel, Cup and Level knobs in cream blackletter, a scuffed Ventricle wordmark, a red LED, a chrome hex footswitch and the version stamped into a bare-metal patch">
 
-A VST3 and CLAP plugin for macOS and Windows.
-<!-- Then a sentence or two on what it does to the sound and who it's for. -->
+A VST3 and CLAP plugin for macOS and Windows. Sing, shout or talk into
+it and it cracks, growls and rasps the way a screamer's throat does, so
+you can get a heavy vocal without wrecking your voice. It's built for a
+mic first; guitar and bass get their own mode later.
 
 ## How it works
 
-<!-- A numbered list of what the engine does to the signal, in plain words. -->
+1. It listens to how hard you're pushing. Below the point Strain sets
+   the voice stays clean; past it, it cracks, and the harder you push
+   the more it breaks.
+2. Growl flips every other cycle of your voice upside down, the way
+   false vocal cords vibrate at half the pitch, and wobbles each cycle a
+   little so it sounds like a throat rather than a fuzz box.
+3. Rasp adds breath noise that follows your voice's loudness and pulse.
+4. The result is driven into an uneven, tube-like clipper, harder as
+   the voice cracks.
+5. Two moving resonances push it toward OH, AH or EH, and Cup adds the
+   bass, honk and muffle of a mic cupped in the hand.
+
+Everything runs one sample at a time, with no added latency.
 
 ## Controls
 
@@ -22,9 +36,6 @@ A VST3 and CLAP plugin for macOS and Windows.
 | Cup | 0–100% | The boxy honk of a mic cupped in the hand |
 | Level | -24 to +12 dB | Output level |
 | Stomp | On / Off | The footswitch. Off fades the effect out and passes the input untouched |
-
-Only Level changes the sound so far. The other knobs are in place for the
-scream engine, which comes next.
 
 Drag a knob up or down (hold Shift for fine moves), scroll, or use the
 arrow keys. Double-click a knob to reset it.
